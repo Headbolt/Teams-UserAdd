@@ -175,22 +175,22 @@ Write-Host 'Running Command "'Set-CsPhoneNumberAssignment -Identity "$global:Use
 Set-CsPhoneNumberAssignment -Identity "$global:UserUPN" -PhoneNumber "$global:OnpremPhoneNumber" -PhoneNumberType "$global:PhoneNumberType" -LocationID $Location
 Write-Host '' # Output To Make Screen Easier for User to read.
 Write-Host 'Running Command "'Set-CsPhoneNumberAssignment -Identity "$UserUPN" -EnterpriseVoiceEnabled $true'"'
-#Set-CsPhoneNumberAssignment -Identity "$UserUPN" -EnterpriseVoiceEnabled $true
+Set-CsPhoneNumberAssignment -Identity "$UserUPN" -EnterpriseVoiceEnabled $true
 Write-Host '' # Output To Make Screen Easier for User to read.
 Write-Host 'Running Command "'Set-CsOnlineVoicemailUserSettings -Identity sip:"$UserUPN" -VoicemailEnabled $true -PromptLanguage $global:Language -OofGreetingFollowAutomaticRepliesEnabled $global:OofGreetingFollowAutomaticRepliesEnabled'"'
-#Set-CsOnlineVoicemailUserSettings -Identity sip:"$UserUPN" -VoicemailEnabled $true -PromptLanguage $global:Language -OofGreetingFollowAutomaticRepliesEnabled $global:OofGreetingFollowAutomaticRepliesEnabled
+Set-CsOnlineVoicemailUserSettings -Identity sip:"$UserUPN" -VoicemailEnabled $true -PromptLanguage $global:Language -OofGreetingFollowAutomaticRepliesEnabled $global:OofGreetingFollowAutomaticRepliesEnabled
 Write-Host '' # Output To Make Screen Easier for User to read.
 Write-Host 'Running Command "'Grant-CsOnlineVoiceRoutingPolicy -Identity "$UserUPN" -PolicyName "$global:CsOnlineVoiceRoutingPolicy"'"'
-#Grant-CsOnlineVoiceRoutingPolicy -Identity "$UserUPN" -PolicyName "$global:CsOnlineVoiceRoutingPolicy"
+Grant-CsOnlineVoiceRoutingPolicy -Identity "$UserUPN" -PolicyName "$global:CsOnlineVoiceRoutingPolicy"
 Write-Host '' # Output To Make Screen Easier for User to read.
 Write-Host 'Running Command "'Grant-CsTenantDialPlan -Identity "$UserUPN" -PolicyName "$global:CsTenantDialPlan"'"'
-#Grant-CsTenantDialPlan -Identity "$UserUPN" -PolicyName "$global:CsTenantDialPlan"
+Grant-CsTenantDialPlan -Identity "$UserUPN" -PolicyName "$global:CsTenantDialPlan"
 Write-Host '' # Output To Make Screen Easier for User to read.
 Write-Host 'Running Command "'Grant-CsOnlineVoicemailPolicy -PolicyName "$global:CsOnlineVoicemailPolicy" -Identity "$UserUPN"'"'
-#Grant-CsOnlineVoicemailPolicy -PolicyName "$global:CsOnlineVoicemailPolicy" -Identity "$UserUPN"
+Grant-CsOnlineVoicemailPolicy -PolicyName "$global:CsOnlineVoicemailPolicy" -Identity "$UserUPN"
 Write-Host '' # Output To Make Screen Easier for User to read.
 Write-Host 'Running Command "'Grant-CsDialoutPolicy -identity "$UserUPN" -PolicyName "$global:CsDialoutPolicy"'"'
-#Grant-CsDialoutPolicy -identity "$UserUPN" -PolicyName "$global:CsDialoutPolicy"
+Grant-CsDialoutPolicy -identity "$UserUPN" -PolicyName "$global:CsDialoutPolicy"
 #
 Write-Host '' # Output To Make Screen Easier for User to read.
 Write-Host '-------------------------------------------------------------------------------------------------------------------' # Output To Make Screen Easier for User to read.
