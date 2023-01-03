@@ -215,7 +215,7 @@ Logging
 #
 CollectVariables
 #
-#Connections
+Connections
 #
 EmergencyLocation 
 #
